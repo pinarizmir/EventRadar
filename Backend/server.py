@@ -20,8 +20,8 @@ from event_importer import fetch_all_sources, events_as_dicts
 
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "eventradar.sqlite3"
-HOST = os.environ.get("EVENTRADAR_HOST", "127.0.0.1")
-PORT = int(os.environ.get("EVENTRADAR_PORT", "8000"))
+HOST = os.environ.get("EVENTRADAR_HOST", "0.0.0.0")
+PORT = int(os.environ.get("PORT") or os.environ.get("EVENTRADAR_PORT", "8000"))
 TOKEN_TTL_DAYS = 7
 
 
